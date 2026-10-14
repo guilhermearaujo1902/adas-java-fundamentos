@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ExercicioSequenciaImpressao {
 
     /*
@@ -14,5 +16,47 @@ public class ExercicioSequenciaImpressao {
     // 1 2 3 4 5
     // Saída de dados esperada
     // 3 4 9 8 15
+
+    public static void main(String[] args) {
+
+        Scanner leitor = new Scanner(System.in);
+
+        System.out.println("Digite o número final da contagem ");
+        int numeroFinal = leitor.nextInt();
+
+        int maiorPar = 0;
+        int maiorImpar = 0;
+
+        for (int cont = 1; cont <= numeroFinal; cont++) {
+
+            int auxiliar = 0;
+
+            if (cont % 2 == 0) {
+
+                auxiliar = cont * 2;
+                if (auxiliar > maiorPar) {
+                    maiorPar = auxiliar;
+                }
+                System.out.print((auxiliar) + " - ");
+
+            } else {
+
+                auxiliar = cont * 3;
+                if (auxiliar > maiorImpar) {
+                    maiorImpar = auxiliar;
+                }
+                System.out.print((auxiliar) + " - ");
+
+            }
+
+        }
+
+        System.out.println();
+
+        System.out.println("O maior número Par encontrado foi " + maiorPar);
+        System.out.println("\nO maior número Ímpar encontrado foi " + maiorImpar);
+
+    }
+
 
 }
