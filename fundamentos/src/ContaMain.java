@@ -22,10 +22,12 @@ public class ContaMain {
 
         int opcaoMenu;
 
+        // Repetição WHILE
         do {
             System.out.println(menu);
             opcaoMenu = leitor.nextInt();
 
+            // Condicional SWITCH
             switch (opcaoMenu) {
 
                 case 1:
